@@ -67,5 +67,4 @@ int main(){
 	solve1();
 	printf("\n");
   solve2();
-	
 }
