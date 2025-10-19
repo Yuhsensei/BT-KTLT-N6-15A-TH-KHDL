@@ -66,5 +66,5 @@ int main(){
 	scanf("%d %d",&n,&m);
 	solve1();
 	printf("\n");
-  solve2();
+	solve2();
 }
