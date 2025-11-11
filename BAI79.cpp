@@ -1,21 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, A[1001][1001], ans = 0;
-void input(){
-	scanf("%d",&n);
+void input(int A[][1001], int n){
 	for(int i = 0; i < n; i++) 
         for(int j = 0; j < n; j++) 
             scanf("%d",&A[i][j]);
 }
-void output(){
+void output(int A[][1001], int n){
 	for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++) 
             printf("%d", A[i][j]);
         printf("\n");
     }
 }
-void solve(){
-	int Max = 0;
+void solve(int A[][1001], int n){
+	int Max = 0, ans = 0;
 	for(int i = 0; i < n; i++){
 		Max = A[i][0];
         for(int j = 0; j < n; j++)
@@ -25,12 +23,14 @@ void solve(){
     	ans += Max;
 	}
 	printf("ma tran sau khi doi\n");
-	output();
+	output(A, n);
 	printf("Tong cac phan tu lon nhat la %d", ans);
 }
 int main(){
-	input();
-	output();
-    solve();
+  int n, A[1001][1001];
+  scanf("%d",&n);
+	input(A, n);
+	output(A, n);
+  solve(A, n);
 	return 0;    
 }
